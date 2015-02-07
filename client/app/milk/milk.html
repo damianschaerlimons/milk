@@ -1,0 +1,54 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+
+          <div class="row card">
+              <div class="col-md-12">
+                  <div class="h1">Testing</div>
+                  <div>StartTime: {{startTime}}</div>
+                  <div>StartTime: {{stopTime}}</div>
+                  <button class="btn btn-default" ng-click="startTesting()">Start Testing</button>
+                  <button class="btn btn-default" ng-click="stopTesting()">End Testing</button>
+                  <button class="btn btn-success" ng-click="loadLogs()">Update Table</button>
+
+              </div>
+          </div>
+          <div class="row card">
+              <div class="col-md-12">
+              <div class="h1">Logs</div>
+
+              <table class="table table-striped table-hover ">
+              <thead>
+                <th>ID</th>
+                <th>count</th>
+                <th>Represents</th>
+                <!-- <td>Timestamp</td>
+                <td>Device</td> -->
+              </thead>
+              <tbody>
+                <tr ng-repeat="log in logs">
+                  <td>{{log.device}}</td>
+
+                  <td>{{log.count}}</td>
+                  <td>{{log.count/60}} H</td>
+                </tr>
+              </tbody>
+              </table>
+
+            </div>
+          </div>
+        </div>
+
+    </div>
+    </div>
+
+
+
+<footer class="footer">
+  <div class="container">
+      <p>Milk V.0.1 |
+        <a href="http://www.mons.ch">@MONS</a>
+  </div>
+</footer>

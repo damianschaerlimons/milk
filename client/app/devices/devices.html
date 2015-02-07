@@ -1,0 +1,23 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<div class="container">
+
+<div class="row">
+    <div class="col-md-4" ng-repeat="device in devices">
+      <card title="device.name" description="device._id" action="addLog(device._id)" actiondesc="Send Log" action2="removeDevice(device._id)" action2desc="Delete" action3="goDevice(device._id)" action3desc="See"></card>
+    </div>
+    <div class="col-md-4">
+      <button class="btn btn-primary" ng-click="toggleAdd()" ng-show="!addingPossible">Add</button>
+      <card title="newVal" titelditable="true" placeholder="placeholder" action="add()" actiondesc="Save" action2="toggleAdd()" action2desc="Cancel" ng-show="addingPossible"></card>
+    </div>
+</div>
+
+
+</div>
+
+<footer class="footer">
+  <div class="container">
+      <p>Milk V.0.1 |
+        <a href="http://www.mons.ch">@MONS</a>
+  </div>
+</footer>

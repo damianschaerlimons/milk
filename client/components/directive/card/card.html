@@ -1,0 +1,17 @@
+<div class="panel">
+      <div class="panel-heading">
+
+            <h2 ng-hide="titelditable">{{title}}</h2>
+            <input type=text class="form-control floating-label" placeholder="{{placeholder}}" ng-hide="!titelditable" ng-model="title">
+      </div>
+      <div class="panel-body">
+          <p>{{description}}</p>
+
+      </div>
+
+      <div class="panel-footer">
+        <button class="btn  btn-primary" ng-click="action()">{{actiondesc}}</button>
+        <button class="btn btn-danger pull-right" ng-click="action2()">{{action2desc}}</button>
+        <button class="btn btn-default" ng-click="action3()">{{action3desc}}</button>
+      </div>
+</div>

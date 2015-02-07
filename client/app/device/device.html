@@ -1,0 +1,65 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<div class="container">
+
+<div class="row">
+  <div class="col-md-12">
+    <h1>{{device.name}}</h1>
+    <br>
+    <h3>Device ID: {{device._id}}</h3>
+    <br>
+  </div>
+
+  <div class="col-md-12">
+
+    <quick-datepicker ng-model='startDate'></quick-datepicker>
+    <quick-datepicker ng-model='endDate'></quick-datepicker>
+
+    <button class="btn btn-primary" ng-click="getData()">Refresh</button>
+
+
+    <!--<button class="btn btn-primary" ng-class="{active: todayActive}" ng-click="today()">Today</button>-->
+  <!--<button class="btn btn-primary" ng-class="{active: yesterDayActive}" ng-click="yesterday()" >Yesterday</button>-->
+  <!--<button class="btn btn-primary" ng-class="{active: weekActive}" ng-click="week()">Week</button>-->
+
+  <!--<button class="btn btn-primary pull-right" ng-click="startTesting()">Test</button>-->
+  <!--<button class="btn btn-primary pull-right" ng-click="stopTesting()">Stop</button>-->
+
+
+</div>
+
+<div class="col-md-12">
+
+    <svg id="visualisation" width="1000" height="500"></svg>
+
+</div>
+
+<div class="col-md-12">
+  <table class="table table-striped table-hover ">
+  <thead>
+    <th>ID</th>
+    <th>Temperature</th>
+    <th>Time</th>
+    <!-- <td>Timestamp</td>
+    <td>Device</td> -->
+  </thead>
+  <tbody>
+    <tr ng-repeat="log in logs">
+      <td>{{log._id}}</td>
+
+      <td>{{log.temperature}}</td>
+      <td>{{log.timestamp | date:'dd-MM-yyyy HH:mm'}}</td>
+    </tr>
+  </tbody>
+  </table>
+</div>
+</div>
+
+</div>
+
+<footer class="footer">
+  <div class="container">
+      <p>Milk V.0.1 |
+        <a href="http://www.mons.ch">@MONS</a>
+  </div>
+</footer>
